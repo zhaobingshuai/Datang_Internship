@@ -1,0 +1,50 @@
+//memset(key,0,INPUT_STR_LEN);
+//memset(value,0,INPUT_STR_LEN);
+1、
+if(fwrite(&ke_va[n],sizeof(struct key_value),1,ffp)!=1)
+2、
+遇到waring C4996解决办法：
+项目--最后Pro--c/c++预处理--添加：_CRT_SECURE_NO_WARNINGS
+3、
+void save(int n)    //保存结构体数组到result.txt中
+{
+	FILE *ffp;
+	if((ffp=fopen("result.txt","a+")) == NULL)
+	{
+		printf("can not result.txt!\n");
+		exit(0);
+	}
+	//将ke_va[n]结构体数组的key和value存放到result.txt中
+	fprintf(ffp,"%s",key_value[n].key); 
+	fprintf(ffp,"%s",key_value[n].value); 
+	fclose(ffp);
+}
+
+4、//void Save2File()  //将每一组数据的行号和key显示并输出到文件中
+//{
+//	map<string,vector<string>>::iterator mIter;   //mIter指向mKeyValue
+//
+//	ofstream outfile("cpp_file.txt");//新建cpp_file.txt文件，用C++编写，用C的话无法保存string变量到文件中
+//	if(!outfile)
+//	{
+//		cerr<<"无法打开或找到文件!"<<endl;
+//		exit(1);
+//	}
+//
+//	map<int,string> mLineNo;   //定义一个保存“行号，key”的map
+//	map<int,string>::iterator mLN;   //mLN指向名为mLineNo的map
+//	int iLineNo = 1;   //定义iLineNo表示行号，依次递增
+//	for(mIter = mKeyValue.begin(); mIter!=mKeyValue.end(); mIter++)
+//	{
+//		mLineNo.insert(make_pair(iLineNo,(*mIter).first.c_str()));//遍历将行号和key插入名为mLineNo的map中
+//		iLineNo++;
+//	}
+//
+//	for(mLN = mLineNo.begin(); mLN != mLineNo.end(); mLN++)
+//	{
+//		cout<<(*mLN).first<<"      "<<(*mLN).second<<endl;  //通过遍历输出“行号  key”到屏幕
+//		outfile<<(*mLN).first<<"      "<<(*mLN).second<<endl;//通过遍历保存“行号  key”到文件中
+//	}
+//	outfile.close();
+//}
+

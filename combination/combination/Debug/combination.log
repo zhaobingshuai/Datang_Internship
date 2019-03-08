@@ -1,0 +1,26 @@
+﻿生成启动时间为 2018/8/28 20:30:21。
+     1>项目“D:\ZBS\大唐实习\combination\combination\combination.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在对“Debug\combination.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\Compingtion.cpp
+         Compingtion.cpp
+     1>d:\zbs\大唐实习\compingtion.cpp(107): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(304) : 参见“scanf”的声明
+     1>d:\zbs\大唐实习\compingtion.cpp(128): error C2664: “FindFirstFileW”: 不能将参数 1 从“const char *”转换为“LPCWSTR”
+                 与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+     1>d:\zbs\大唐实习\compingtion.cpp(383): warning C4018: “<”: 有符号/无符号不匹配
+     1>d:\zbs\大唐实习\compingtion.cpp(447): warning C4018: “<”: 有符号/无符号不匹配
+     1>d:\zbs\大唐实习\compingtion.cpp(613): warning C4018: “<=”: 有符号/无符号不匹配
+     1>d:\zbs\大唐实习\compingtion.cpp(639): warning C4018: “<”: 有符号/无符号不匹配
+     1>d:\zbs\大唐实习\compingtion.cpp(650): error C2664: “RemoveDirectoryW”: 不能将参数 1 从“char [2048]”转换为“LPCWSTR”
+                 与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+     1>d:\zbs\大唐实习\compingtion.cpp(651): error C2664: “CreateDirectoryW”: 不能将参数 1 从“char [2048]”转换为“LPCWSTR”
+                 与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+     1>d:\zbs\大唐实习\compingtion.cpp(680): warning C4018: “<”: 有符号/无符号不匹配
+     1>d:\zbs\大唐实习\compingtion.cpp(687): warning C4018: “<”: 有符号/无符号不匹配
+     1>已完成生成项目“D:\ZBS\大唐实习\combination\combination\combination.vcxproj”(build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:10.83

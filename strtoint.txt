@@ -1,0 +1,62 @@
+#include<stdio.h>
+#include<limits.h>
+#include<iostream>
+using namespace std;
+int strtoint(const char*str)
+{
+		if(str == NULL || *str == '\0')
+		{
+				return 0;
+		}
+		long long num = 0;
+		int sign = 1;
+		while(*str == ' ')
+		{
+		    str++;
+		}
+		if(*str == '+')
+		{
+		    str++;
+		}
+		else if(*str == '-')
+		{
+		    str++;
+			sign = -1;
+		}
+		while(*str != '\0')
+		{
+				if(*str >= '0'  && *str <= '9')
+				{
+						num = num *10 + (*str - '0')*sign;
+						if(num >= INT_MAX)
+						{
+								return INT_MAX;
+						}
+						else if(num <= INT_MIN)
+						{
+								return INT_MIN;
+						}
+				}
+				else
+				{
+						break;
+				}
+				str++;
+		}
+		return (int)num;
+}
+
+int main()
+{
+		char str1[] = "+125874";
+		char str2[] = "-789546";
+                char str3[] = "qq456";
+		char str4[] = "fdabh";
+		char str5[] = "rhqan54abhf";
+		printf("%d\n",strtoint(str1));
+		printf("%d\n",strtoint(str2));
+		printf("%d\n",strtoint(str3));
+		printf("%d\n",strtoint(str4));
+		printf("%d\n",strtoint(str5));
+		return 0;
+}
